@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,100&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>To Do List</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Luai's Todo List</h1>
+    </header>
+    <form>
+        <input type="text" class='toDoInput'>
+        <button class='toDoButton' type="submit">
+            <i class='fas fa-plus-square'></i>
+        </button>
+        <div class='select'>
+            <select name="todos" class="filter-todo">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
+        </div>
+    </form>
+    <div class="toDoContainer">
+        <!-- Keep 0 space between the ul tags. Otherwise when we run our JS function 
+            that gets the list of nodes we end up with a "Text" node that has no class-->
+        <ul class='toDoList'></ul>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
